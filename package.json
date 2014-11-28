@@ -1,0 +1,14 @@
+{
+  "name":"fh-htmltopdf-service",
+  "description":"web service that converts html doc to pdf",
+  "author":"Keyang Xiang <keyang.xiang@gmail.com>",
+  "dependencies":{
+    "fh-mbaas-api" : "~4.6.0",
+    "request": "~2.40.0",
+    "body-parser": "~1.0.2",
+    "cors": "~2.2.0",
+    "express":"~4.10.4"
+  },
+  "engine":"node >=0.10"
+
+}
