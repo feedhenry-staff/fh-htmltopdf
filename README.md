@@ -23,3 +23,11 @@ Following parameters are supported:
 * pageSize: configure the size of generated PDF page. it could be "paperwidth\*paperheight" like 5in\*7.5in
 , 10cm\*20cm, or "A4", "Letter"
 * zoom: the factor to zoom out or in.
+
+
+## Use with request module
+Using node.js request module which allows streaming functionality will simplify development a lot.
+```js
+fs.createReadStream("myHtml.html").pipe(request.post("http://pdfconverterhost/api")).pipe(fs.createWriteStream("myPdf.pdf"));
+```
+
