@@ -58,9 +58,11 @@ function runPhantomCli(cb) {
   if (this.params.zoom){
     params.push(this.params.zoom);
   }
-  var c = spawn(pBin,params); 
+  var c = spawn(pBin,params,{
+    "stdio":"inherit"
+  }); 
   var self=this;
-  c.on("close", function() {
+  c.on("exit", function() {
     var rs = fs.createReadStream(self.pdfPath);
     rs.on("data", function(d, e) {
       self.push(d, e);
