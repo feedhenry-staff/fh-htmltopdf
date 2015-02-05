@@ -7,7 +7,8 @@
     "request": "~2.40.0",
     "body-parser": "~1.0.2",
     "cors": "~2.2.0",
-    "express":"~4.10.4"
+    "express":"~4.10.4",
+    "fs":"*"
   },
   "engine":"node >=0.10"
 
